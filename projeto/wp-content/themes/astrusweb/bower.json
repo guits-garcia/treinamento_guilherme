@@ -1,0 +1,21 @@
+{
+  "name": "Astrusweb",
+  "description": "",
+  "homepage": "http://astrusweb.com/",
+  "author": "Astrusweb <murilo@astrusweb.com>",
+  "dependencies": {
+    "jquery": "*",
+    "jquery-validation": "*",
+    "jquery-form": "*",
+    "slick-carousel": "1.8.1",
+    "jquery.maskedinput": "*",
+    "jquery-mask-plugin": "*",
+    "jquery-ui": "*",
+    "masonry": "*",
+    "imagesloaded": "*",
+    "scrollmagic": "*",
+    "jquery.scrollTo": "2.1.2",
+    "font-awesome": "4.7.0",
+    "fancybox": "*"
+  }
+}

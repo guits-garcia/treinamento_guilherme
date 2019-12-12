@@ -1,0 +1,323 @@
+@media only screen and (max-width : 767px) {
+    #header-blog{
+        height:20vh;
+        .header-wrapper-tablet{
+            height:100%;
+            .header-center{
+                .header-name{
+                    margin-bottom:20px;
+                }
+                .header-desc{
+                    height:10%;
+                    img{
+                        height:100%;
+                    }
+                }
+            }
+        }
+    }
+
+    #banner-primeiro-sec{
+       .banner-primeiro{
+           p{
+            font-size:7vh;
+            top:38%;
+            width:100%;
+           }
+           .scroll-down-box{
+               display:none;
+           }
+       }
+   }
+   #banner-segundo-sec{
+       .banner-segundo{
+           background-image:none;
+           .blank-bg{
+               width:100%;
+               height:100%;
+               .desc{
+                   width:57%;
+                   .descric{
+                       width:100%;
+                       h4{
+                           width:100%;
+                           font-size:2.6vh;
+                           margin: 5% 0;
+                       }
+                       p{
+                           width:100%;
+                           font-size:5vh;
+                       }
+                   }
+               }
+               .img-holder{
+                   width:100%;
+                   height:70%;
+                   top:29.9%;
+               }
+           }
+       }
+   }
+   #banner-terceiro-sec{
+    .wrapper-geralzao{
+        max-width:280px;
+        width:100%;
+        margin:0 auto 50px;
+        .wrapper-col{
+            width:100%;
+            display: flex;
+            flex-direction:column;
+            justify-content: space-between;
+            .wrap-row1{
+                width:100%;
+                display:flex;
+                flex-direction:column;
+                justify-content: space-between;
+                margin-bottom:15px;
+                .inner-col{
+                    height:390px;
+                    width:100%;
+                    margin-bottom:15px;
+                    .div1{
+                        height:135px;
+                    }
+                    .div2{
+                        width:100%;
+                        height:255px;
+                    }
+                }
+                .div3{
+                    width:100%;
+                    height:300px;
+                    position:relative;
+                    p{
+                        display:block;
+                    }
+                    span{
+                        display:block;
+                    }
+                    h4{
+                        display:block;
+                        top:67%;
+                        width:100%;
+                    }
+                    &::before{
+                        position:absolute;
+                        left: 0; right: 0;
+                        top: 0; bottom: 0;
+                        content: "";
+                        background-color:black;
+                        opacity:0.6;
+                    }
+                }
+            }
+            .wrap-row2{
+                display:flex;
+                flex-direction:column;
+                justify-content: space-between;
+                .div4{
+                    width:100%;
+                    height:195px;
+                    h4{
+                        width:100%;
+                    }
+                }
+                .div5{
+                    display:none;
+                }
+                .div6{
+                    display:none;
+                }
+            }
+        }
+    }
+}
+
+   .caracteristicas{
+       display:block;
+       height:fit-content;
+       margin-top:0%;
+       .caracteristicas-top{
+           .enunciado-caract{
+               p{
+                   font-size:9vh;
+                   width:100%;
+               }
+           }
+       }
+       .caracteristicas-bottom{
+           flex-direction:column;
+           :nth-child(n+4):nth-child(-n+6){
+                margin-top:0;
+            }
+           .caract{
+               width:100%;
+               height:fit-content;
+               padding:5% 0;
+               margin:3% 0;
+               img{
+                   width:37.5%;
+                   height:auto;
+               }
+           }
+       }
+   }
+    #belapedra{
+        .caracteristicas-belapedra{
+            flex-direction:column;
+            align-items:center;
+            margin-bottom:10px;
+            .caracteristica-single{
+                margin:0 0 50px;
+            }
+        }
+        .white-bg{
+        width:90%;
+            h1{
+                margin-top:50px;
+                font-size:30px;
+            }
+            p{
+                margin-top:35px;
+                line-height:28px;
+            }
+        }
+        .informacoes-centrais{
+            height:480px;
+            width:auto;
+            position:inherit;
+            .informacoes-centrais-texto{
+                position:initial;
+                transform:none;
+                margin:0 6.5% 0;
+
+                h1{
+                    padding-top:50px;
+                    margin:0;
+                    font-size: 30px;
+                    width:100%;
+                }
+                p{
+                    line-height:26px;
+                    margin-top:30px;
+                }
+            }
+           
+        }  
+    }
+    #processos{
+        width:95vw;
+        margin: 0 auto;
+        .procs-wrapper{
+            width: 100%;
+            margin: 0;
+            .proc-title{
+                width:70%;
+                margin: 5vw auto;
+                h1{
+                    margin:0;
+                }
+            }
+            .proc-desc{
+                width:55%;
+                margin: 0 ;
+            }
+            .proc-list{
+                .proc{
+                    width:calc(50% - 10px);
+                }
+            }
+        }
+
+    }
+
+    /* MODIFICAÇÃO NA ALTURA DO BOTÃO DE FECHAR OS MODAIS */
+    .close{
+        top:0;
+    }
+
+    /** pagina blog **/
+    #blog-posts{
+        .post{
+            img{
+                width:95%;
+            }
+        }
+    }
+   
+    #searchform{
+        #s {
+            margin-left:4%;
+            width:92%;
+        }
+    }
+    .categorias-list{
+        form{
+            p::after{
+                width:30%;
+                left:35.5%;
+            }
+        }
+    }
+    /** pagina blog fim **/
+
+    #tecnologia{
+        .tecs-wrapper{
+            margin:0 auto 5vw;
+            .tec{
+                margin:10px;
+                width:calc(50% - 20px);
+            }
+        }
+    }
+    #contato{
+        h1{
+            font-size:9.4vw;
+            text-align:center;
+        }
+    }
+    #produtos{
+        .fotos-produtos{
+            flex-direction:column-reverse;
+
+            .produto{
+                width:95%;
+                margin:0 auto 20px;
+                p{
+                    width:70%;
+                    height:auto;
+                    margin:0 auto;
+                }
+                .prod-info{
+                    display:none;
+                }
+            }
+        }
+    }
+    footer{
+        #footer{
+            .footer-mobile{
+                .astrus-logo{
+                    margin-bottom:70px;
+                }
+            }
+            .footer-right{
+                margin-top:40px;
+                .adress-info{
+                    ul{
+                        display:flex;
+                        flex-direction:column;
+                        align-items:center;
+                        text-align:center;
+                        li{
+                            margin:5px 0;
+                        }
+                    }
+                }
+            }
+            .footer-left{
+                margin: 35px 0;
+            }
+        }
+    }
+}
