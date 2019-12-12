@@ -1,0 +1,56 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    background-color:#1a2846;
+}
+
+#logo{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+#logo path:nth-child(1){
+stroke-dashoffset:699;
+stroke-dasharray: 699;
+}
+#logo path:nth-child(2){
+
+}
+#logo path:nth-child(1){
+
+}
+#logo path:nth-child(1){
+
+}
+#logo path:nth-child(1){
+
+}
+#logo path:nth-child(1){
+
+}
+#logo path:nth-child(1){
+
+}
+
+@keyframes line-anim{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+/*@keyframes fill{
+    from {
+        fill:transparent; /*preciso botar um FROM pois o svg foi importado sem fill
+    }
+    to {
+        fill:white;
+    }
+} */
