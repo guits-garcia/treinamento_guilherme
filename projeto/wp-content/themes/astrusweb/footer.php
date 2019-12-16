@@ -4,8 +4,8 @@
             <div class="footersson">
                 <div class="footer-mobile">
                     <p>
-                        <a href='#' class="media-anchor">Acompanhar no Google Plus</a>
-                        <a href='#' class='google-icon'>
+                        <a href='http://startupgraveyard.io/' class="media-anchor">Acompanhar no Google Plus</a>
+                        <a href='http://startupgraveyard.io/' class='google-icon'>
                             <i class="fab fa-google-plus-g"></i>
                         </a>
                     </p>
@@ -30,12 +30,12 @@
                 <div class="footer-right">
                     <nav class="adress-info">
                         <ul>
-                            <li><a href='http://localhost/projetoguilherme/index.php/belapedra/'>A BELAPEDRA</a></li>
-                            <li><a href='http://localhost/projetoguilherme/index.php/tecnologia/'>TECNOLOGIA</a></li>
-                            <li><a href='http://localhost/projetoguilherme/index.php/processos/'>PROCESSOS</a></li>
-                            <li><a href='http://localhost/projetoguilherme/index.php/produtos/'>PRODUTOS</a></li>
-                            <li><a href='http://localhost/projetoguilherme/index.php/blog/'>BLOG</a></li>
-                            <li><a href='http://localhost/projetoguilherme/index.php/contato/'>CONTATO</a></li>
+                            <li><a href=<?php echo get_permalink(182); ?>>A BELAPEDRA</a></li>
+                            <li><a href=<?php echo get_permalink(169); ?>>TECNOLOGIA</a></li>
+                            <li><a href=<?php echo get_permalink(167); ?>>PROCESSOS</a></li>
+                            <li><a href=<?php echo get_permalink(171); ?>>PRODUTOS</a></li>
+                            <li><a href=<?php echo get_permalink(80); ?>>BLOG</a></li>
+                            <li><a href=<?php echo get_permalink(120); ?>>CONTATO</a></li>
                         </ul>
                     </nav>
                     <div class="media-lang">

@@ -99,7 +99,7 @@
 							echo "<div class='div5' style='background-image:url(". get_the_post_thumbnail_url() .")'><a href='".get_the_permalink()."'><p>". get_the_title()."</p><span>". get_the_date()."</span><h4>".excerpt(8)."</h4></a></div>";
 								$contador_div++;
 								break;
-							case 4:
+							case 4:	
 							echo "<div class='div6' style='background-image:url(". get_the_post_thumbnail_url() .")'><a href='".get_the_permalink()."'><p>". get_the_title()."</p><span>". get_the_date()."</span><h4>".excerpt(8)."</h4></a></div>";
 								echo "	</div>
 									</div>

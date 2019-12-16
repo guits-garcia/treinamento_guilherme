@@ -20,16 +20,7 @@
     <header>
    
 <?php 
-$cat_da_pagina = get_the_category(); 
-$haystack = $_SERVER['REQUEST_URI'];
-$needle = "/projetoguilherme/index.php/blog/";
-$needle1 = "/projetoguilherme/index.php/category/";
-
-
-$localhost_string = 'http://localhost'; 
-$pag_atual_link = $localhost_string.$haystack; //para dar destaque nas categorias do header!!
-
-if ((strpos($haystack,$needle) !== false) || (strpos($haystack,$needle1) !== false) || is_single()) {
+if ( is_page(80) || is_category()) {
         ?> <section id='header-blog'>
 
         <div class='header-wrapper-tablet'>
@@ -45,13 +36,14 @@ if ((strpos($haystack,$needle) !== false) || (strpos($haystack,$needle1) !== fal
                 <div class='line3'></div>
             </div>
             <ul class='nav-links'>
-                <li><a href='http://localhost/projetoguilherme/index.php/belapedra/'>A&nbsp;BELAPEDRA</a></li>
-                <li><a href='http://localhost/projetoguilherme/index.php/tecnologia/'>TECNOLOGIA</a></li>
-                <li><a href='http://localhost/projetoguilherme/index.php/processos/'>PROCESSOS</a></li>
-                <li><a href='http://localhost/projetoguilherme/index.php/produtos/'>PRODUTOS</a></li>
-                <li><a href='http://localhost/projetoguilherme/index.php/blog/'>BLOG</a></li>
-                <li><a href='http://localhost/projetoguilherme/index.php/contato/'>CONTATO</a></li>
+                <li><a href= <?php echo get_permalink(182); ?>>A&nbsp;BELAPEDRA</a></li>
+                <li><a href=<?php echo get_permalink(169); ?>>TECNOLOGIA</a></li>
+                <li><a href=<?php echo get_permalink(167); ?>>PROCESSOS</a></li>
+                <li><a href=<?php echo get_permalink(171); ?>>PRODUTOS</a></li>
+                <li><a href=<?php echo get_permalink(80); ?>>BLOG</a></li>
+                <li><a href=<?php echo get_permalink(120); ?>>CONTATO</a></li>
             </ul>
+            <div class="blur"></div>
         </div>
 
         <div class='header-wrapper'>
@@ -66,13 +58,13 @@ if ((strpos($haystack,$needle) !== false) || (strpos($haystack,$needle1) !== fal
             </div>
             <div class='header-main'>
                 <div class='header-left'>
-                    <div class='header-content <?php if ($pag_atual_link == get_category_link(11)){echo "destacado"; }?>'>
+                    <div class='header-content <?= is_category(11) ? 'destacado':''?>'>
                             <a href='<?php echo get_category_link(11); ?>'>MODA</a>
                     </div>
-                    <div class='header-content <?php if ($pag_atual_link == get_category_link(12)){echo "destacado"; }?>'>
+                    <div class='header-content <?= is_category(12) ? 'destacado':''?>'>
                             <a href='<?php echo get_category_link(12) ?>'>JOIAS</a>
                     </div>
-                    <div class='header-content <?php if ($pag_atual_link == get_category_link(2)){echo "destacado"; }?>'>
+                    <div class='header-content <?= is_category(2) ? 'destacado':''?>'>
                             <a href='<?php echo get_category_link(2) ?>'>LOOK DO DIA</a>
                     </div>
                 </div>
@@ -81,11 +73,11 @@ if ((strpos($haystack,$needle) !== false) || (strpos($haystack,$needle1) !== fal
                     <div class='header-name'><img src='<?php echo get_template_directory_uri() ?>/images/belapedra-logo.png'></div>
                 </div>
                 <div class='header-right'>
-                    <div class='header-content'><a href='http://localhost/projetoguilherme/index.php/belapedra/'>POR DENTRO DA BELAPEDRA</a></div>
-                    <div class='header-content <?php if ($pag_atual_link == "http://localhost/projetoguilherme/index.php/category/diversos/") {echo "destacado"; } ?>'>
-                            <a href='<?php echo "http://localhost/projetoguilherme/index.php/category/diversos/"; ?>'>DIVERSOS</button>  
+                    <div class='header-content'><a href=<?php echo get_permalink(182); ?>>POR DENTRO DA BELAPEDRA</a></div>
+                    <div class='header-content <?= is_category(14) ? 'destacado':''?>'>
+                            <a href='<?php echo get_category_link(14); ?>'>DIVERSOS</button>  
                     </div>
-                    <div class='header-content' style='margin-right:0;'><a href='http://localhost/projetoguilherme/index.php'>SITE BELAPEDRA</a></div>
+                    <div class='header-content' style='margin-right:0;'><a href=<?php echo get_permalink(5); ?>>SITE BELAPEDRA</a></div>
                 </div>
             </div>
             <div class='header-bottom'>
@@ -95,8 +87,7 @@ if ((strpos($haystack,$needle) !== false) || (strpos($haystack,$needle1) !== fal
     </section>
 <?php 
     
-} 
-    else if (($_SERVER['REQUEST_URI'] == ("/projetoguilherme/")) || ($_SERVER['REQUEST_URI'] == ("/projetoguilherme/index.php/belapedra/"))){
+}  else if (is_page(5) || is_page(182) ){
     ?> 
 <section id='header'>
     <div class='header-wrapper-tablet'>
@@ -111,13 +102,14 @@ if ((strpos($haystack,$needle) !== false) || (strpos($haystack,$needle1) !== fal
         <div class='line3'></div>
     </div>
     <ul class='nav-links'>
-        <li><a href='http://localhost/projetoguilherme/index.php/belapedra/'>A&nbsp;BELAPEDRA</a></li>
-        <li><a href='http://localhost/projetoguilherme/index.php/tecnologia/'>TECNOLOGIA</a></li>
-        <li><a href='http://localhost/projetoguilherme/index.php/processos/'>PROCESSOS</a></li>
-        <li><a href='http://localhost/projetoguilherme/index.php/produtos/'>PRODUTOS</a></li>
-        <li><a href='http://localhost/projetoguilherme/index.php/blog/'>BLOG</a></li>
-        <li><a href='http://localhost/projetoguilherme/index.php/contato/'>CONTATO</a></li>
+        <li><a href= <?php echo get_permalink(182); ?>>A&nbsp;BELAPEDRA</a></li>
+        <li><a href=<?php echo get_permalink(169); ?>>TECNOLOGIA</a></li>
+        <li><a href=<?php echo get_permalink(167); ?>>PROCESSOS</a></li>
+        <li><a href=<?php echo get_permalink(171); ?>>PRODUTOS</a></li>
+        <li><a href=<?php echo get_permalink(80); ?>>BLOG</a></li>
+        <li><a href=<?php echo get_permalink(120); ?>>CONTATO</a></li>
     </ul>
+    <div class="blur"></div>
 </div>
 
 
@@ -128,18 +120,18 @@ if ((strpos($haystack,$needle) !== false) || (strpos($haystack,$needle1) !== fal
     </div>
     <div class='header-main'>
         <div class='header-left'>
-            <div class='header-content'><a href='http://localhost/projetoguilherme/index.php/belapedra/'>A BELAPEDRA</a></div>
-            <div class='header-content'><a href='http://localhost/projetoguilherme/index.php/tecnologia/'>TECNOLOGIA</a></div>
-            <div class='header-content'><a href='http://localhost/projetoguilherme/index.php/processos/'>PROCESSOS</a></div>
+            <div class='header-content <?= is_page(182) ? 'destacado':''?>'><a href=<?php echo get_permalink(182); ?>>A BELAPEDRA</a></div>
+            <div class='header-content'><a href=<?php echo get_permalink(169); ?>>TECNOLOGIA</a></div>
+            <div class='header-content'><a href=<?php echo get_permalink(167); ?>>PROCESSOS</a></div>
         </div>
         <div class='header-center'>
             <div class='header-logo'><img src='<?php echo get_template_directory_uri() ?>/images/logo.png'></div>
             <div class='header-name'><img src='<?php echo get_template_directory_uri() ?>/images/belapedra-logo.png'></div>
         </div>
         <div class='header-right'>
-            <div class='header-content'><a href='http://localhost/projetoguilherme/index.php/produtos/'>PRODUTOS</a></div>
-            <div class='header-content'><a href='http://localhost/projetoguilherme/index.php/blog/'>BLOG</a></div>
-            <div class='header-content' style='margin-right:0;'><a href='http://localhost/projetoguilherme/index.php/contato/'>CONTATO</a></div>
+            <div class='header-content'><a href=<?php echo get_permalink(171); ?>>PRODUTOS</a></div>
+            <div class='header-content'><a href=<?php echo get_permalink(80); ?>>BLOG</a></div>
+            <div class='header-content' style='margin-right:0;'><a href=<?php echo get_permalink(120); ?>>CONTATO</a></div>
         </div>
     </div>
     <div class='header-bottom'>
@@ -168,13 +160,14 @@ if ((strpos($haystack,$needle) !== false) || (strpos($haystack,$needle1) !== fal
             <div class='line3'></div>
         </div>
         <ul class='nav-links'>
-            <li><a href='http://localhost/projetoguilherme/index.php/belapedra/'>A&nbsp;BELAPEDRA</a></li>
-            <li><a href='http://localhost/projetoguilherme/index.php/tecnologia/'>TECNOLOGIA</a></li>
-            <li><a href='http://localhost/projetoguilherme/index.php/processos/'>PROCESSOS</a></li>
-            <li><a href='http://localhost/projetoguilherme/index.php/produtos/'>PRODUTOS</a></li>
-            <li><a href='http://localhost/projetoguilherme/index.php/blog/'>BLOG</a></li>
-            <li><a href='http://localhost/projetoguilherme/index.php/contato/'>CONTATO</a></li>
+            <li><a href= <?php echo get_permalink(182); ?>>A&nbsp;BELAPEDRA</a></li>
+            <li><a href=<?php echo get_permalink(169); ?>>TECNOLOGIA</a></li>
+            <li><a href=<?php echo get_permalink(167); ?>>PROCESSOS</a></li>
+            <li><a href=<?php echo get_permalink(171); ?>>PRODUTOS</a></li>
+            <li><a href=<?php echo get_permalink(80); ?>>BLOG</a></li>
+            <li><a href=<?php echo get_permalink(120); ?>>CONTATO</a></li>
         </ul>
+        <div class="blur"></div>
     </div>
 
 
@@ -187,9 +180,9 @@ if ((strpos($haystack,$needle) !== false) || (strpos($haystack,$needle1) !== fal
     </div>
     <div class='header-main'>
         <div class='header-left'>
-            <div class='header-content'><a href='http://localhost/projetoguilherme/index.php/belapedra/'>A BELAPEDRA</a></div>
-            <div class='header-content'><a href='http://localhost/projetoguilherme/index.php/tecnologia/'>TECNOLOGIA</a></div>
-            <div class='header-content'><a href='http://localhost/projetoguilherme/index.php/processos/'>PROCESSOS</a></div>
+            <div class='header-content'><a href= <?php echo get_permalink(182); ?> >A BELAPEDRA</a></div>
+            <div class='header-content <?= is_page(169) ? 'destacado':''?>'><a href= <?php echo get_permalink(169); ?> >TECNOLOGIA</a></div>
+            <div class='header-content <?= is_page(167) ? 'destacado':''?>'><a href= <?php echo get_permalink(167); ?> >PROCESSOS</a></div>
         </div>
         <div class='header-center'>
             <div class='header-logo'><img src='<?php echo get_template_directory_uri() ?>/images/logo.png'></div>
@@ -197,20 +190,20 @@ if ((strpos($haystack,$needle) !== false) || (strpos($haystack,$needle1) !== fal
         </div>
         <div class='header-right'>
             <div class='header-content-dropdown'>
-                <div><a href='http://localhost/projetoguilherme/index.php/produtos/'>PRODUTOS</a></div>
+                <div class='<?= is_page(171) ? 'destacado':''?>'><a href= <?php echo get_permalink(171); ?> >PRODUTOS</a></div>
                 <div class='dropdown-hidden'>
-                    <form action='http://localhost/projetoguilherme/index.php/produtos/' method='GET'>
+                    <form action= <?php echo get_permalink(171); ?> method='GET'>
                         <input type='hidden' name='produto' value='pedra'>
                         <button class='dropdown-btn' style='padding-right:39px;' type='submit'><i class='fas fa-caret-right'></i><p>PEDRAS</p></button>
                     </form>
-                    <form action='http://localhost/projetoguilherme/index.php/produtos/' method='GET'>
+                    <form action= <?php echo get_permalink(171); ?> method='GET'>
                         <input type='hidden' name='produto' value='semijoia'>
                         <button class='dropdown-btn' type='submit'><i class='fas fa-caret-right'></i><p>SEMIJOIAS</p></button>
                     </form>
                 </div>
             </div>
-            <div class='header-content'><a href='http://localhost/projetoguilherme/index.php/blog/'>BLOG</a></div>
-            <div class='header-content' style='margin-right:0;'><a href='http://localhost/projetoguilherme/index.php/contato/'>CONTATO</a></div>
+            <div class='header-content'><a href= <?php echo get_permalink(80); ?> >BLOG</a></div>
+            <div class='header-content <?= is_page(120) ? 'destacado':''?>' style='margin-right:0;'><a href=<?php echo get_permalink(120); ?>>CONTATO</a></div>
         </div>
     </div>
     <div class='header-bottom'>
